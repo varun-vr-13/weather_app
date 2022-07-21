@@ -7,7 +7,7 @@ const app=express();
 const hbs=require('hbs');
 const geocode=require('../geocode');
 const forecast=require('../forecast')
-
+const port=process.env.PORT || 3000
 console.log(loc);
 app.use(express.static(loc));
 
@@ -100,6 +100,6 @@ app.get('*',(req,res)=>{
 })
 
 console.log(path.join(__dirname,'about.html'));
-app.listen(3000,()=>{
-    console.log("connected on port 3000");
+app.listen(port,()=>{
+    console.log(`connected on port ${port}`);
 });

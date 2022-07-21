@@ -1,4 +1,4 @@
-console.log('loaded file');
+
 /*
 fetch('https://puzzle.mead.io/puzzle').then(response=>{
     response.json().then(data=>{
@@ -22,7 +22,7 @@ weatherform.addEventListener('submit',(e)=>{
       
         area.innerHTML='Loading...';
     
-    fetch('http://localhost:3000/weather?address='+location).then(response=>{
+    fetch('/weather?address='+location).then(response=>{
     response.json().then((data)=>{
         area.innerHTML='';
         if(data.error){
