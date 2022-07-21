@@ -1,6 +1,7 @@
 const request=require('request');
 const geocode=(add,callback)=>{
     const url='https://api.mapbox.com/geocoding/v5/mapbox.places/'+add+'.json?access_token=pk.eyJ1Ijoicm9oaXQ1NDMiLCJhIjoiY2w1cGlpaW15MGJ2ZzNqbXZ3aDE2bWNmcyJ9.IkJPN2ITobe4FkGPTimVXQ';
+
     request({url,json:true},(error,{body})=>{
   
       if(error){
@@ -18,4 +19,5 @@ const geocode=(add,callback)=>{
       }
     })
    }
+   console.log('');
 module.exports=geocode;
